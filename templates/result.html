@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ action }} Result | MoveHex</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+    <!-- JS for Copy functionality -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">{{ action }} Result</h1>
+
+        <div class="output-container p-4 mt-4">
+            <h3>Original Input:</h3>
+            <p>{{ original }}</p>
+
+            <h3>{{ action }} Output:</h3>
+            <pre id="output">{{ result }}</pre>
+
+            <button id="copyButton" class="btn btn-primary mt-3">Copy to Clipboard</button>
+        </div>
+
+        <br>
+        <a href="/" class="btn btn-secondary mt-3">Go back</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer text-center mt-5">
+        <p>Made by - <a href="https://github.com/syiiz" target="_blank">Syiiz</a></p>
+        <p>Inspired from - <a href="https://github.com/WintrCat/chessencryption" target="_blank">WintrCat's ChessEncryption</a></p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
